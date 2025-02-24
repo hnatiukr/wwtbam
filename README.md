@@ -1,8 +1,12 @@
 [![CI](https://github.com/hnatiukr/wwtbam/actions/workflows/ci.yml/badge.svg)](https://github.com/hnatiukr/wwtbam/actions/workflows/ci.yml)
 
-# Who wants to be a millionaire?
+<h1 align="center">
+  Who wants to be a millionaire?
+</h1>
 
-Test your knowledge at free online game based on the famous TV quiz show, give the correct answers and win some amazing artificial money!
+<p align="center">
+  Test your knowledge at game based on the famous TV quiz show, give the correct answers and win some amazing artificial money!
+</p>
 
 ## Play
 
