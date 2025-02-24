@@ -4,8 +4,13 @@ Test your knowledge at free online game based on the famous TV quiz show, give t
 
 You can play in **normal mode** and in **hints mode**. Hints mode explicitly marks correct and incorrect answer options. It useful for debugging or if you just need to complete the game quickly.
 
-- normal mode: https://wwtbam-bay.vercel.app/
-- hints mode: https://wwtbam-bay.vercel.app/?hints=true
+**Normal mode**
+
+https://wwtbam-bay.vercel.app/
+
+**Hints mode**
+
+https://wwtbam-bay.vercel.app/?hints=true
 
 ...or manually add the corresponding query parameter to the URL which restarts the game with enabled hints mode: `/?hints=true`.
 
