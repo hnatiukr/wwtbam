@@ -1,0 +1,37 @@
+@layer tokens {
+  :root {
+    /*
+            colors
+        */
+
+    --c-black-100: #1c1c21;
+    --c-black-40: #d0d0d8;
+    --c-black-5: #f5f5f7;
+
+    --c-white-100: #ffffff;
+
+    --c-orange-120: #e87928;
+    --c-orange-100: #ff8b37;
+    --c-orange-80: #ffac70;
+    --c-orange-5: #fff3eb;
+
+    --c-green-100: #47d867;
+    --c-green-5: #e6faea;
+
+    --c-red-100: #ec6259;
+    --c-red-5: #fdeeed;
+
+    /*
+            border-radius
+        */
+
+    --br-sm: 8px;
+    --br-lg: 12px;
+
+    /*
+            transition
+        */
+
+    --tr-duration: 0.2s;
+  }
+}

@@ -1,0 +1,90 @@
+@layer component.step.tokens {
+  .container {
+    --step-sm-width: 240px;
+    --step-sm-height: 32px;
+
+    --step-lg-width: 240px;
+    --step-lg-height: 40px;
+
+    --step-inactive-color: var(--c-black-100);
+    --step-inactive-stroke: var(--c-black-40);
+
+    --step-current-color: var(--c-orange-100);
+    --step-current-stroke: var(--c-orange-100);
+
+    --step-finished-color: var(--c-black-40);
+    --step-finished-stroke: var(--c-black-40);
+  }
+}
+
+@layer component.step {
+  .cell {
+    justify-items: center;
+  }
+
+  .cell::before {
+    background-color: var(--c-white-100);
+  }
+}
+
+@layer component.step.state {
+  @layer inactive {
+    .container::after,
+    .cell {
+      color: var(--step-inactive-color);
+      background-color: var(--step-inactive-stroke);
+    }
+
+    .cell::before {
+      background-color: var(--step-inactive-fill);
+    }
+  }
+
+  @layer current {
+    .container[aria-current="true"]::after,
+    .container[aria-current="true"] > .cell {
+      color: var(--step-current-color);
+      background-color: var(--step-current-stroke);
+    }
+
+    .container[aria-current="true"] > .cell::before {
+      background-color: var(--step-current-fill);
+    }
+  }
+
+  @layer finished {
+    .container[aria-current="false"]::after,
+    .container[aria-current="false"] > .cell {
+      color: var(--step-finished-color);
+      background-color: var(--step-finished-stroke);
+    }
+
+    .container[aria-current="false"] > .cell::before {
+      background-color: var(--step-finished-fill);
+    }
+  }
+}
+
+@layer component.step.dimensions {
+  .cell {
+    width: var(--step-sm-width);
+    height: var(--step-sm-height);
+  }
+
+  .cell::before {
+    width: calc(var(--step-sm-width) - 2px);
+    height: calc(var(--step-sm-height) - 2px);
+  }
+
+  @media (min-width: 1440px) {
+    .cell {
+      width: var(--step-lg-width);
+      height: var(--step-lg-height);
+    }
+
+    .cell::before {
+      width: calc(var(--step-lg-width) - 2px);
+      height: calc(var(--step-lg-height) - 2px);
+    }
+  }
+}

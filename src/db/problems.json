@@ -1,0 +1,124 @@
+[
+  {
+    "question": "What do penguins typically wear to formal events?",
+    "options": [
+      "Tuxedos (they're born with them)",
+      "Bow ties",
+      "Top hats",
+      "Monocles"
+    ],
+    "keys": [0]
+  },
+  {
+    "question": "Which of these are legitimate excuses for being late to work?",
+    "options": [
+      "My cat ate my car keys",
+      "A parade of ducks blocked traffic",
+      "Time zones changed while I was driving",
+      "My alarm clock ran away",
+      "My coffee maker staged a protest"
+    ],
+    "keys": [1, 4]
+  },
+  {
+    "question": "What do clouds do in their free time?",
+    "options": [
+      "Practice making shapes",
+      "Take rain showers",
+      "Go storm chasing",
+      "Attend weather conferences"
+    ],
+    "keys": [0, 1]
+  },
+  {
+    "question": "Why do dogs chase their tails?",
+    "options": [
+      "They think it's a furry squirrel",
+      "Secret tail morse code",
+      "Practicing for circus performances"
+    ],
+    "keys": [0]
+  },
+  {
+    "question": "What's the real reason dinosaurs went extinct?",
+    "options": [
+      "They all joined a space program",
+      "Failed at doing jumping jacks",
+      "Overslept the meteor warning",
+      "Started a diet fad that backfired"
+    ],
+    "keys": [2]
+  },
+  {
+    "question": "Which superpowers would be the most inconvenient?",
+    "options": [
+      "Everything you touch turns to glitter",
+      "You can only walk backwards",
+      "You speak in movie quotes",
+      "Your sneezes teleport you randomly",
+      "You can read minds but only of houseplants",
+      "Your hair changes color based on your mood"
+    ],
+    "keys": [0, 3, 5]
+  },
+  {
+    "question": "What's the best way to communicate with aliens?",
+    "options": [
+      "Interpretive dance",
+      "Meme exchange program",
+      "Universal emoji language",
+      "Writing in comic sans"
+    ],
+    "keys": [1]
+  },
+  {
+    "question": "Why do cats knock things off tables?",
+    "options": [
+      "Scientific gravity experiments",
+      "Testing your reflexes",
+      "Redecorating services",
+      "Playing dominoes"
+    ],
+    "keys": [0, 1, 2, 3]
+  },
+  {
+    "question": "What's the real purpose of traffic jams?",
+    "options": [
+      "Flash mob rehearsals",
+      "Impromptu car karaoke contests",
+      "Mobile networking events"
+    ],
+    "keys": [1]
+  },
+  {
+    "question": "Which of these are valid methods for time travel?",
+    "options": [
+      "Running really fast backwards",
+      "Waiting normally but very dramatically",
+      "Taking a very long nap",
+      "Changing your clock manually"
+    ],
+    "keys": [1]
+  },
+  {
+    "question": "What do socks do when they disappear in the dryer?",
+    "options": [
+      "Join a sock puppet theater",
+      "Start a secret sock society",
+      "Go on vacation to Hawaii",
+      "Apply for witness protection",
+      "Train to become ninja socks"
+    ],
+    "keys": [0, 1, 4]
+  },
+  {
+    "question": "Why do computers always update at the worst possible moment?",
+    "options": [
+      "They're practicing their timing",
+      "They have a sense of humor",
+      "They're actually taking selfies",
+      "They're testing your patience"
+    ],
+    "keys": [1, 3]
+  }
+]

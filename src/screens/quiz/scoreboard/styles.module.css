@@ -1,0 +1,13 @@
+.layout {
+  display: grid;
+  align-items: center;
+  align-content: center;
+  grid-row-gap: 8px;
+
+  height: 100%;
+}
+
+.layout > div {
+  width: 100%;
+  height: fit-content;
+}

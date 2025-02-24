@@ -1,0 +1,169 @@
+@layer component.button.tokens {
+  .container {
+    --button-sm-width: 288px;
+    --button-sm-height: 56px;
+
+    --button-lg-width: 390px;
+    --button-lg-height: 72px;
+
+    --button-inactive-fill: var(--c-white-100);
+    --button-inactive-stroke: var(--c-black-40);
+
+    --button-hover-fill: var(--c-white-100);
+    --button-hover-stroke: var(--c-orange-100);
+
+    --button-selected-fill: var(--c-orange-5);
+    --button-selected-stroke: var(--c-orange-100);
+
+    --button-correct-fill: var(--c-green-5);
+    --button-correct-stroke: var(--c-green-100);
+
+    --button-wrong-fill: var(--c-red-5);
+    --button-wrong-stroke: var(--c-red-100);
+  }
+}
+
+@layer component.button {
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .overlay[aria-hidden] {
+    display: block;
+
+    cursor: wait;
+  }
+
+  .cell {
+    justify-items: start;
+
+    padding-right: 32px;
+    padding-left: 48px;
+
+    color: var(--c-black-100);
+
+    cursor: pointer;
+  }
+
+  .cell::after {
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%);
+
+    color: var(--c-orange-100);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 116%;
+
+    counter-increment: option-counter;
+    content: counter(option-counter, upper-alpha);
+  }
+
+  .label[data-hint="false"] {
+    color: grey;
+    font-style: italic;
+    text-decoration: line-through;
+  }
+
+  @media (min-width: 1440px) {
+    .cell {
+      padding-left: 56px;
+    }
+
+    .cell::after {
+      left: 32px;
+
+      font-size: 20px;
+    }
+  }
+}
+
+@layer component.button.state {
+  @layer inactive {
+    .container::after,
+    .cell {
+      background-color: var(--button-inactive-stroke);
+    }
+
+    .cell::before {
+      background-color: var(--button-inactive-fill);
+    }
+  }
+
+  @layer hovered {
+    .container:not([aria-disabled]):hover::after,
+    .container:not([aria-disabled]):hover > .cell {
+      background-color: var(--button-hover-stroke);
+    }
+
+    .container:not([aria-disabled]):hover > .cell::before {
+      background-color: var(--button-hover-fill);
+    }
+  }
+
+  @layer selected {
+    .container:focus-within::after,
+    .container > .cell:focus {
+      background-color: var(--button-selected-stroke);
+    }
+
+    .container:focus-within > .cell::before {
+      background-color: var(--button-selected-fill);
+    }
+  }
+
+  @layer correct {
+    .container[data-valid="true"]:focus-within::after,
+    .container[data-valid="true"] > .cell:focus {
+      background-color: var(--button-correct-stroke);
+    }
+
+    .container[data-valid="true"]:focus-within > .cell::before {
+      background-color: var(--button-correct-fill);
+    }
+  }
+
+  @layer wrong {
+    .container[data-valid="false"]:focus-within::after,
+    .container[data-valid="false"] > .cell:focus {
+      background-color: var(--button-wrong-stroke);
+    }
+
+    .container[data-valid="false"]:focus-within > .cell::before {
+      background-color: var(--button-wrong-fill);
+    }
+  }
+}
+
+@layer component.button.dimensions {
+  .cell {
+    width: var(--button-sm-width);
+    height: var(--button-sm-height);
+  }
+
+  .cell::before {
+    width: calc(var(--button-sm-width) - 2px);
+    height: calc(var(--button-sm-height) - 2px);
+  }
+
+  @media (min-width: 1440px) {
+    .cell {
+      width: var(--button-lg-width);
+      height: var(--button-lg-height);
+    }
+
+    .cell::before {
+      width: calc(var(--button-lg-width) - 2px);
+      height: calc(var(--button-lg-height) - 2px);
+    }
+  }
+}

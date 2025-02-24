@@ -1,0 +1,148 @@
+.main {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+
+  gap: 24px;
+
+  padding: 20px;
+
+  text-align: center;
+
+  background: var(--c-black-5);
+
+  transition: background var(--tr-duration);
+}
+
+.main[data-state="idle"] {
+  background: linear-gradient(
+    to bottom right,
+    var(--c-white-100) 50%,
+    var(--c-orange-5) 50%
+  );
+}
+
+.logo {
+  width: 288px;
+  height: 192px;
+
+  transition:
+    width var(--tr-duration),
+    height var(--tr-duration);
+}
+
+.heading_container {
+  display: grid;
+  grid-auto-flow: row;
+
+  gap: 8px;
+}
+
+.preheading {
+  color: var(--c-black-100);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 116%;
+
+  opacity: 0.5;
+}
+
+.heading {
+  margin-bottom: 102px;
+
+  color: var(--c-black-100);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 116%;
+
+  transition: font-size var(--tr-duration);
+}
+
+.button {
+  width: 288px;
+  height: 48px;
+
+  color: var(--c-white-100);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 116%;
+  text-align: center;
+
+  background-color: var(--c-orange-100);
+
+  border: unset;
+  border-radius: var(--br-sm);
+}
+
+.button:focus,
+.button:active {
+  background-color: var(--c-orange-120);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button {
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: var(--c-orange-80);
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    gap: 32px;
+
+    text-align: left;
+  }
+
+  .main > *:nth-child(1) {
+    justify-self: self-end;
+  }
+
+  .main > *:nth-child(2) {
+    justify-self: self-start;
+  }
+
+  .logo {
+    width: 398px;
+    height: 234px;
+  }
+
+  .preheading {
+    font-size: 24px;
+  }
+
+  .heading {
+    margin-bottom: 64px;
+
+    font-size: 32px;
+    line-height: 116%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .logo {
+    width: 624px;
+    height: 367px;
+  }
+
+  .preheading {
+    font-size: 32px;
+  }
+
+  .heading {
+    font-size: 56px;
+    line-height: 116%;
+  }
+
+  .button {
+    width: 296px;
+    height: 64px;
+
+    border-radius: var(--br-lg);
+  }
+}
