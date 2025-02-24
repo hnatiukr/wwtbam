@@ -97,7 +97,7 @@ npm run ci
 The `/src` directory contains a structure such that subdirectories are distributed according to their functional purpose:
 
 - `/app`: keep this dir as clean as possible according to the app route paths to avoid polluting and easily distinguish parsing system files from custom one
-- `/db`: contains JSON DB and accomplished with the schema types and validators. See [Database](#database) for more details
+- `/db`: contains JSON DB and accomplished with the schema types and validators. See [Data](#data) for more details
 - `/lib`: subroutines used at the application abstraction level
 - `/screens`: there are main view screens and their inner components are stored here
 - `/store`: a global store, state management that supplimented with selectors
@@ -128,8 +128,6 @@ Take a look at the next example of data structure:
     "options": ["Yellow", "Red", "Green", "White", "Blue"],
     "keys": [1, 2, 4]
   },
-
-  ...
 ]
 ```
 
