@@ -1,6 +1,10 @@
+[![CI](https://github.com/hnatiukr/wwtbam/actions/workflows/ci.yml/badge.svg)](https://github.com/hnatiukr/wwtbam/actions/workflows/ci.yml)
+
 # Who wants to be a millionaire?
 
 Test your knowledge at free online game based on the famous TV quiz show, give the correct answers and win some amazing artificial money!
+
+## Play
 
 You can play in **normal mode** and in **hints mode**. Hints mode explicitly marks correct and incorrect answer options. It useful for debugging or if you just need to complete the game quickly.
 
@@ -12,7 +16,7 @@ https://wwtbam-bay.vercel.app/
 
 https://wwtbam-bay.vercel.app/?hints=true
 
-...or manually add the corresponding query parameter to the URL which restarts the game with enabled hints mode: `/?hints=true`.
+> You've got the point - just manually add the corresponding query parameter `/?hints=true` to the URL which launches the game with enabled hints.
 
 ## Technical requirements
 
