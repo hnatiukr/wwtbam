@@ -53,4 +53,7 @@ export const problemSchema = zod
  * problems shape schema
  */
 
-export const problemsSchema = zod.array(problemSchema).readonly();
+export const problemsSchema = zod
+  .array(problemSchema)
+  .min(1, "problems schema: at least 1 problem is required")
+  .readonly();
