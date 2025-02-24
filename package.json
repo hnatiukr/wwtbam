@@ -6,14 +6,15 @@
     "node": ">=22.14.0"
   },
   "scripts": {
-    "prepare": "husky",
-    "test": "vitest run",
+    "prepare": "husky || true",
     "dev": "next dev",
     "start": "next start",
-    "build": "next build --no-lint",
     "lint": "next lint",
-    "formatting": "prettier --write --list-different .",
-    "ci": "npm run formatting && npm run lint && npm run build"
+    "fmt": "prettier --write --list-different .",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "build": "next build --no-lint",
+    "ci": "npm run fmt && npm run lint && npm test && npm run build"
   },
   "dependencies": {
     "clsx": "2.1.1",
